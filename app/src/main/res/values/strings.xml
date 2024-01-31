@@ -1,0 +1,34 @@
+<resources>
+    <string name="name">이름을 입력해주세요</string>
+    <string name="userName">이름</string>
+    <string name="checkID">실명 인증된 id로 가입</string>
+    <string name="certification">인증 요청</string>
+    <string name="userID">아이디</string>
+    <string name="userPassword">비밀번호</string>
+    <string name="keepLoginState">로그인 상태 유지</string>
+    <string name="IPSecurity">IP보안</string>
+    <string name="login">로그인</string>
+    <string name="forgotPassword">비밀번호 찾기</string>
+    <string name="findID">아이디 찾기</string>
+    <string name="signUP">회원가입</string>
+    <string name="searchUserInfoContainerSeparator">|</string>
+    <string name="signUPRealUsernameID">실명 인증된 아이디로 가입</string>
+    <string name="email">\@naver.com</string>
+    <string name="userBirthdate8digit">생년월일 8자리</string>
+    <string name="chooseMobileCarrier">통신사 선택</string>
+    <string name="male_Man">남자</string>
+    <string name="male_Woman">여자</string>
+    <string name="notChoice">선택안함</string>
+    <string name="domestic">내국인</string>
+    <string name="foreign">외국인</string>
+    <string name="cellphoneNumber">휴대전화번호</string>
+    <string name="essential">[필수]</string>
+    <string name="certificationTermsandConditions">인증약관 전체 동의</string>
+    <string name="chooseEmail">[선택] 이메일주소 (비밀번호 찾기 등 본인 확인)</string>
+    <string name="termsOfService">이용약관</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="privacyPolice">개인정보처리방침</string>
+    <string name="legal">책임의 한계와 법적고지</string>
+    <string name="memberInfoCenter">회원정보 고객센터</string>
+    <string name="login_menu_footer">Copyright © NAVER Corp. All Rights Reserved.</string>
+</resources>
