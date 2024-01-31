@@ -45,7 +45,7 @@
                 android:text="@string/signUPRealUsernameID" />
 
             <android.widget.CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/signUPRealUsernameIDCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@drawable/checkbox_selector" />
@@ -184,6 +184,13 @@
                     android:hint="@string/userBirthdate8digit" />
             </LinearLayout>
 
+            <Spinner
+                android:id="@+id/mobileCarrierSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/scrollContainer" />
+
             <LinearLayout
                 android:id="@+id/chooseMaleLinearLayout"
                 android:layout_width="match_parent"
@@ -230,6 +237,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/userMaleAndForeignOrDomestic"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -295,13 +304,6 @@
 
             <Spinner
                 android:id="@+id/countryNumberSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:entries="@array/contry_spinner_array"
-                app:layout_constraintStart_toStartOf="@+id/scrollContainer" />
-
-            <Spinner
-                android:id="@+id/mobileCarrierSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:entries="@array/contry_spinner_array"
