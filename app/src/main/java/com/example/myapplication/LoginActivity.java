@@ -3,9 +3,10 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -14,8 +15,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
         // textView에 인텐트 이동 효과
         TextView userSignUP = findViewById(R.id.userSignUP);
+
         userSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
