@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="default_naver_color_green">#03C75A</color>
+    <color name="default_naver_bored_gray_color">#929294</color>
 </resources>

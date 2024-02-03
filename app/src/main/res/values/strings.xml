@@ -24,6 +24,10 @@
     <string name="cellphoneNumber">휴대전화번호</string>
     <string name="essential">[필수]</string>
     <string name="certificationTermsandConditions">인증약관 전체 동의</string>
+    <string name="processingOfUniqueIdentificaionInfo">고유식별정보 처리</string>
+    <string name="termsOFMobileCarrierService">통신사 이용약관</string>
+    <string name="termsOFAuthenticationService">인증사 이용약관</string>
+    <string name="naverPrivacyCollection">네이버 개인정보수집</string>
     <string name="chooseEmail">[선택] 이메일주소 (비밀번호 찾기 등 본인 확인)</string>
     <string name="termsOfService">이용약관</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -31,4 +35,5 @@
     <string name="legal">책임의 한계와 법적고지</string>
     <string name="memberInfoCenter">회원정보 고객센터</string>
     <string name="login_menu_footer">Copyright © NAVER Corp. All Rights Reserved.</string>
+    <string name="userOFPersonalInfo">개인정보 이용</string>
 </resources>
