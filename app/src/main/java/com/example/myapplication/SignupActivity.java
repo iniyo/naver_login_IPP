@@ -14,7 +14,7 @@ public class SignupActivity extends AppCompatActivity {
     LinearLayout chooseMaleLinearLayout, userMaleAndForeignOrDomestic;
     Spinner countryNumberSpinner;
     CheckBox signUPRealUsernameIDCheckBox;
-    RadioButton RadioButton_lineView;
+    View RadioButton_lineView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class SignupActivity extends AppCompatActivity {
         chooseMaleLinearLayout = (LinearLayout) findViewById(R.id.chooseMaleLinearLayout);
         userMaleAndForeignOrDomestic = (LinearLayout) findViewById(R.id.userMaleAndForeignOrDomestic);
         countryNumberSpinner = (Spinner) findViewById(R.id.countryNumberSpinner);
-        RadioButton_lineView = (RadioButton) findViewById(R.id.RadioButton_lineView);
+        RadioButton_lineView = (View) findViewById(R.id.RadioButton_lineView);
         // checkBox 클릭 리스너
         signUPRealUsernameIDCheckBox = findViewById(R.id.signUPRealUsernameIDCheckBox);
         signUPRealUsernameIDCheckBox.setOnClickListener(new View.OnClickListener() {

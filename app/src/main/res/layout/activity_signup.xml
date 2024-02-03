@@ -224,7 +224,7 @@
                     android:layout_weight="1"
                     android:textSize="18dp"
                     android:button="@null"
-                    android:drawableRight="@drawable/checkbox_selector"
+                    android:drawableRight="@drawable/expansion_certification_img_selector"
                     android:hint="@string/chooseMobileCarrier" />
 
             </LinearLayout>
@@ -474,7 +474,7 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:button="@null"
-                    android:background="@drawable/certification_checkbox_selector"/>
+                    android:background="@drawable/expansion_certification_img_selector"/>
 
                 <android.widget.CheckBox
                     android:id="@+id/processingOfUniqueIdentificaionInfo_CheckBox"
