@@ -34,6 +34,11 @@
     <string name="privacyPolice">개인정보처리방침</string>
     <string name="legal">책임의 한계와 법적고지</string>
     <string name="memberInfoCenter">회원정보 고객센터</string>
-    <string name="login_menu_footer">Copyright © NAVER Corp. All Rights Reserved.</string>
+    <string name="login_menu_footer1">Copyright</string>
+    <string name="login_menu_footer_naverCorp">© NAVER Corp.</string>
+    <string name="login_menu_footer2">All Rights Reserved.</string>
     <string name="userOFPersonalInfo">개인정보 이용</string>
+    <string name="AuthenticationRequestButton">인증 요청</string>
+    <string name="naverLogin">NAVER 로그인</string>
+    <string name="naverMainText">네이버를 더 안전하고 편리하게 이용하세요</string>
 </resources>

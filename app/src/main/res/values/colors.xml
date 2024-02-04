@@ -3,5 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="default_naver_color_green">#03C75A</color>
-    <color name="default_naver_bored_gray_color">#929294</color>
+    <color name="default_naver_color_gray">#929294</color>
+    <color name="default_naver_email_color_BoldGray">#767678</color>
+    <color name="default_naver_login_text_color">#777777</color>
 </resources>

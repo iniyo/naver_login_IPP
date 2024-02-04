@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="SKT">SKT</string>
+    <string name="KT">KT</string>
+    <string name="LG">LG U+</string>
+    <string name="SKTMVNO">SKT 알뜰폰</string>
+    <string name="KTMVNO">KT 알뜰폰</string>
+    <string name="LGMVNO">LG U+ 알뜰폰</string>
+</resources>

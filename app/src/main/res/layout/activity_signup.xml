@@ -11,9 +11,9 @@
     tools:context=".SignupActivity">
 
     <ImageView
-        android:id="@+id/naverLogoImage"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
+        android:id="@+id/signupNaverLogoImage"
+        android:layout_width="100dp"
+        android:layout_height="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/naver_logo_small_146x30" />
@@ -26,7 +26,7 @@
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/naverLogoImage">
+        app:layout_constraintTop_toBottomOf="@+id/signupNaverLogoImage">
 
         <LinearLayout
             android:id="@+id/realUserNameCheckBoxLayout"
@@ -41,20 +41,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_marginEnd="4dp"
                 android:gravity="center"
-                android:text="@string/signUPRealUsernameID" />
+                android:text="@string/signUPRealUsernameID"
+                android:textColor="@color/default_naver_color_gray"
+                android:textSize="13dp" />
 
             <android.widget.CheckBox
                 android:id="@+id/signUPRealUsernameIDCheckBox"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:background="@drawable/checkbox_selector"
                 android:button="@null" />
         </LinearLayout>
 
+        <!-- userID,PW Layout -->
         <LinearLayout
-
             android:id="@+id/signUPContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,16 +68,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/realUserNameCheckBoxLayout">
 
+            <!-- id 입력 Layout -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:paddingEnd="2dp"
-                android:orientation="horizontal">
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingEnd="2dp">
 
                 <ImageView
                     android:id="@+id/userIcon_ID"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
                     android:layout_margin="10dp"
                     app:srcCompat="@drawable/signup_user_id_img_selector" />
 
@@ -84,27 +89,36 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
-                    android:hint="@string/userID" />
+                    android:hint="@string/userID"
+                    android:textSize="15dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="1dp"
                     android:gravity="center"
-                    android:textSize="15sp"
-                    android:text="@string/email" />
+                    android:text="@string/email"
+                    android:textColor="@color/default_naver_email_color_BoldGray"
+                    android:textSize="14dp" />
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/contour_middle_line"></View>
+
+            <!-- 비밀번호 입력 Layout -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/top_bottom_line"
+                android:layout_height="40dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
                     android:layout_margin="10dp"
                     app:srcCompat="@drawable/signup_user_password_img_selector" />
 
@@ -113,20 +127,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="@string/userPassword" />
+                    android:hint="@string/userPassword"
+                    android:textSize="15dp" />
 
             </LinearLayout>
 
-            <LinearLayout
-
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="2dp"
+                android:background="@drawable/contour_middle_line"></View>
+
+            <!-- 이메일 주소 입력 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
                     android:layout_margin="10dp"
                     app:srcCompat="@drawable/signup_user_email_img_selector" />
 
@@ -135,32 +156,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="@string/chooseEmail" />
+                    android:hint="@string/chooseEmail"
+                    android:textSize="15dp" />
 
             </LinearLayout>
-
         </LinearLayout>
 
+        <!-- userInfo -->
         <LinearLayout
             android:id="@+id/userPrivacyContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:padding="1dp"
             android:background="@drawable/default_naver_border"
             android:orientation="vertical"
+            android:padding="1dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/signUPContainer">
 
+            <!-- 이름 Layout -->
             <LinearLayout
+                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/userIcon_Name"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
                     app:srcCompat="@drawable/signup_user_id_img_selector" />
@@ -170,7 +194,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@android:color/transparent"
-                    android:hint="@string/userName" />
+                    android:hint="@string/userName"
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <View
@@ -178,15 +203,16 @@
                 android:layout_height="2dp"
                 android:background="@drawable/contour_middle_line" />
 
+            <!-- 생년월일 선택 Layout -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/userBirthday8digit"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
                     android:scaleType="centerCrop"
@@ -197,7 +223,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
-                    android:hint="@string/userBirthdate8digit" />
+                    android:hint="@string/userBirthdate8digit"
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <View
@@ -205,44 +232,55 @@
                 android:layout_height="2dp"
                 android:background="@drawable/contour_middle_line" />
 
+            <!-- 통신사 선택 Layout -->
             <LinearLayout
+                android:id="@+id/mobile_carrier_popup_Layout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:paddingEnd="11dp">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_vertical|start"
                     android:layout_margin="10dp"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/commu_gray" />
 
                 <android.widget.CheckBox
-                    android:id="@+id/toggleButton"
+                    android:id="@+id/mobileCarrierCheckBox1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textSize="18dp"
                     android:button="@null"
-                    android:drawableRight="@drawable/expansion_certification_img_selector"
-                    android:hint="@string/chooseMobileCarrier" />
+                    android:hint="@string/chooseMobileCarrier"
+                    android:textSize="15dp" />
 
+                <android.widget.CheckBox
+                    android:id="@+id/mobileCarrierCheckBox2"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/expansion_certification_bottom_img_selector"
+                    android:button="@null" />
             </LinearLayout>
 
-
+            <!-- 성별 선택 Radiobutton Layout 남자, 여자, 선택안함 -->
             <LinearLayout
                 android:id="@+id/chooseMaleLinearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center"
+                android:layout_height="40dp"
                 android:paddingHorizontal="10dp"
-                android:paddingVertical="9dp">
+                android:paddingVertical="5dp">
 
                 <RadioGroup
                     android:id="@+id/radioGroupChooseMale"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/default_naver_border"
+                    android:background="@drawable/naver_radio_group_border"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:padding="1dp">
@@ -260,9 +298,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="@drawable/right_left_line"
                         android:button="@null"
                         android:gravity="center"
-                        android:background="@drawable/right_left_line"
                         android:text="@string/male_Woman"
                         android:textColor="@drawable/signup_radiobutton_selector_textcolor" />
 
@@ -275,29 +313,32 @@
                         android:text="@string/notChoice"
                         android:textColor="@drawable/signup_radiobutton_selector_textcolor" />
                 </RadioGroup>
-
             </LinearLayout>
+
+
             <View
-                android:id="@+id/RadioButton_lineView"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@drawable/contour_middle_line" />
+                android:background="@drawable/contour_middle_line"></View>
 
+            <!-- 라디오 버튼, 남자,여자 외국인,내국인 default=gone Layout -->
             <LinearLayout
                 android:id="@+id/userMaleAndForeignOrDomestic"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
-                android:paddingVertical="9dp">
+                android:paddingVertical="9dp"
+                android:visibility="gone">
 
                 <RadioGroup
                     android:id="@+id/radioGroupChooseMaleAndForeignOrDomestic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/default_naver_border"
                     android:layout_weight="1"
+                    android:background="@drawable/naver_radio_group_border"
+                    android:gravity="center"
                     android:orientation="horizontal"
                     android:padding="1dp">
 
@@ -328,17 +369,14 @@
                         android:textColor="@drawable/signup_radiobutton_selector_textcolor" />
                 </RadioGroup>
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp" />
-
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="9dp"
                     android:layout_weight="1"
-                    android:background="@drawable/default_naver_border"
-                    android:orientation="horizontal"
-                    android:layout_marginStart="9dp">
+                    android:background="@drawable/naver_radio_group_border"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:layout_width="match_parent"
@@ -368,23 +406,53 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <Spinner
-                android:id="@+id/countryNumberSpinner"
+            <!-- 국가 번호 선택 Layout -->
+            <LinearLayout
+                android:id="@+id/contryNumberSpinnerLayout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/top_bottom_line"
-                android:entries="@array/contry_spinner_array"
-                app:layout_constraintStart_toStartOf="@+id/scrollContainer" />
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingEnd="11dp">
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/global" />
+
+                <Spinner
+                    android:id="@+id/countryNumberSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:entries="@array/contry_spinner_array"
+                    app:layout_constraintStart_toStartOf="@+id/scrollContainer" />
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="3dp"
+                    app:srcCompat="@drawable/expansion_icon_gray_off_40x40" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/contour_middle_line" />
 
             <LinearLayout
+                android:id="@+id/cellPhoneNumberLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/cellPhone_Icon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
                     app:srcCompat="@drawable/signup_user_cellphone_number_selector" />
@@ -394,141 +462,326 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@android:color/transparent"
-                    android:hint="@string/cellphoneNumber" />
+                    android:hint="@string/cellphoneNumber"
+                    android:textSize="15dp" />
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/certificationTermsandConditionsLayout"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/default_naver_border"
-            android:orientation="horizontal"
-            android:paddingHorizontal="14dp"
-            android:paddingVertical="9dp"
-            app:layout_constraintTop_toBottomOf="@+id/userPrivacyContainer">
-
-            <android.widget.CheckBox
-                android:id="@+id/certificationTermsandConditionsCheckBox"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginEnd="7dp"
-                android:background="@drawable/certification_checkbox_selector"
-                android:button="@null" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:textSize="10sp"
-                android:textColor="#09AA5C"
-                android:text="@string/essential"/>
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/certificationTermsandConditions" />
-
-            <android.widget.CheckBox
-                android:id="@+id/expantionCheckBox"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginEnd="7dp"
-                android:background="@drawable/expansion_certification_img_selector"
-                android:button="@null" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/expansion_certification_touch_container"
+            android:id="@+id/certificationLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
-            android:padding="3dp"
-            app:layout_constraintTop_toBottomOf="@+id/certificationTermsandConditionsLayout">
-
+            android:visibility="gone"
+            android:background="@drawable/default_naver_border"
+            app:layout_constraintTop_toBottomOf="@+id/userPrivacyContainer">
 
             <LinearLayout
-                android:id="@+id/expansion_certification_touch"
+                android:id="@+id/certificationTermsandConditionsLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/naver_border_certification_selector"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="3dp"
-                app:layout_constraintTop_toBottomOf="@+id/expansion_certification_touch">
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="9dp">
 
                 <android.widget.CheckBox
-                    android:id="@+id/userOFPersonalInfo_CheckBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:id="@+id/certificationTermsandConditionsCheckBox"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
                     android:layout_marginEnd="7dp"
-                    android:text="@string/userOFPersonalInfo"
-                    android:drawableLeft="@drawable/expansion_certification_img_selector"
-                    android:button="@null" />
-
-                <android.widget.Button
-                    android:id="@+id/userOFPersonalInfo_Button"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:button="@null"
-                    android:background="@drawable/expansion_certification_img_selector"/>
-
-                <android.widget.CheckBox
-                    android:id="@+id/processingOfUniqueIdentificaionInfo_CheckBox"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginEnd="7dp"
-                    android:background="@drawable/expansion_certification_img_selector"
+                    android:background="@drawable/certification_checkbox_selector"
                     android:button="@null" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/essential"
+                    android:textColor="#09AA5C"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
                     android:layout_weight="1"
-                    android:text="@string/processingOfUniqueIdentificaionInfo"/>
+                    android:text="@string/certificationTermsandConditions"
+                    android:textSize="16dp" />
+
+                <android.widget.CheckBox
+                    android:id="@+id/expantionCheckBox"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/expansion_certification_bottom_img_selector"
+                    android:button="@null" />
             </LinearLayout>
+
             <LinearLayout
-                android:id="@+id/expansion_certification_touch2"
+                android:id="@+id/expansion_certification_touch_Layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="3dp"
-                app:layout_constraintTop_toBottomOf="@+id/expansion_certification_touch">
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingHorizontal="13dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/certificationTermsandConditionsLayout">
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/expansion_certification_touch"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/termsOFMobileCarrierService"/>
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    app:layout_constraintTop_toBottomOf="@+id/expansion_certification_touch">
 
-                <TextView
+                    <android.widget.CheckBox
+                        android:id="@+id/certificatiion_CheckBox1"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@drawable/expansion_certification_img_selector"
+                        android:button="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="2dp"
+                        android:text="@string/userOFPersonalInfo"
+                        android:textSize="13dp">
+
+                    </TextView>
+
+                    <android.widget.Button
+                        android:id="@+id/userOFPersonalInfo_Button"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="42dp"
+                        android:background="@drawable/certification_right_button_gray_32x32"
+                        android:button="@null" />
+
+                    <android.widget.CheckBox
+                        android:id="@+id/certificatiion_CheckBox2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@drawable/expansion_certification_img_selector"
+                        android:button="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="2dp"
+                        android:text="@string/processingOfUniqueIdentificaionInfo"
+                        android:textSize="13dp" />
+
+                    <android.widget.Button
+                        android:id="@+id/processingOfUniqueIdentificaionInfo_Button"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/certification_right_button_gray_32x32"
+                        android:button="@null" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expansion_certification_touch2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/termsOFAuthenticationService"/>
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    app:layout_constraintTop_toBottomOf="@+id/expansion_certification_touch">
 
+                    <android.widget.CheckBox
+                        android:id="@+id/certificatiion_CheckBox3"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@drawable/expansion_certification_img_selector"
+                        android:button="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="2dp"
+                        android:text="@string/termsOFMobileCarrierService"
+                        android:textSize="13dp" />
+
+                    <android.widget.Button
+                        android:id="@+id/termsOFMobileCarrierService_Button"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/certification_right_button_gray_32x32"
+                        android:button="@null" />
+
+                    <android.widget.CheckBox
+                        android:id="@+id/certificatiion_CheckBox4"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@drawable/expansion_certification_img_selector"
+                        android:button="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="2dp"
+                        android:text="@string/termsOFAuthenticationService"
+                        android:textSize="13dp" />
+
+                    <android.widget.Button
+                        android:id="@+id/termsOFAuthenticationService_Button"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/certification_right_button_gray_32x32"
+                        android:button="@null" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expansion_certification_touch3"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    app:layout_constraintTop_toBottomOf="@+id/expansion_certification_touch2">
+
+                    <android.widget.CheckBox
+                        android:id="@+id/certificatiion_CheckBox5"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@drawable/expansion_certification_img_selector"
+                        android:button="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center"
+                        android:text="@string/naverPrivacyCollection"
+                        android:textSize="13dp" />
+
+                    <android.widget.Button
+                        android:id="@+id/naverPrivacyCollection_Button"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/certification_right_button_gray_32x32"
+                        android:button="@null" />
+
+                </LinearLayout>
 
             </LinearLayout>
-            <LinearLayout
-                android:id="@+id/expansion_certification_touch3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="3dp"
-                app:layout_constraintTop_toBottomOf="@+id/expansion_certification_touch2">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/naverPrivacyCollection"/>
-            </LinearLayout>
-
         </LinearLayout>
 
+        <android.widget.Button
+            android:id="@+id/AuthenticationRequestButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/loginbutton_background"
+            android:gravity="center"
+            android:text="@string/AuthenticationRequestButton"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- 통신사 선택 시 나오는 화면 -->
+        <LinearLayout
+            android:id="@+id/chooseMobileCarrierLayout"
+            android:layout_width="200dp"
+            android:layout_height="132dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="140dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/default_naver_border"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/userPrivacyContainer"
+            app:layout_constraintTop_toTopOf="@+id/userPrivacyContainer">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="9dp"
+                    android:text="@string/SKT" />
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="9dp"
+                    android:text="@string/KT" />
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="9dp"
+                    android:text="@string/LG" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="9dp"
+                    android:text="@string/SKTMVNO" />
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="9dp"
+                    android:text="@string/KTMVNO" />
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingStart="9dp"
+                    android:text="@string/LGMVNO" />
+            </LinearLayout>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
