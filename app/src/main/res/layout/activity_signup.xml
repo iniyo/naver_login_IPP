@@ -335,7 +335,7 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
-                android:paddingVertical="9dp"
+                android:paddingVertical="5dp"
                 android:visibility="gone">
 
                 <RadioGroup
@@ -726,7 +726,8 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <android.widget.Button
+                <TextView
+                    android:id="@+id/mobile_carrier_TextView1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -735,7 +736,8 @@
                     android:paddingStart="9dp"
                     android:text="@string/SKT" />
 
-                <android.widget.Button
+                <TextView
+                    android:id="@+id/mobile_carrier_TextView2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -744,7 +746,8 @@
                     android:paddingStart="9dp"
                     android:text="@string/KT" />
 
-                <android.widget.Button
+                <TextView
+                    android:id="@+id/mobile_carrier_TextView3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -761,7 +764,8 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <android.widget.Button
+                <TextView
+                    android:id="@+id/mobile_carrier_TextView4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -770,7 +774,8 @@
                     android:paddingStart="9dp"
                     android:text="@string/SKTMVNO" />
 
-                <android.widget.Button
+                <TextView
+                    android:id="@+id/mobile_carrier_TextView5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -779,7 +784,8 @@
                     android:paddingStart="9dp"
                     android:text="@string/KTMVNO" />
 
-                <android.widget.Button
+                <TextView
+                    android:id="@+id/mobile_carrier_TextView6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

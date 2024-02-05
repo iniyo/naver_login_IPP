@@ -9,8 +9,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.w3c.dom.Text;
 
 
 public class SignupActivity extends AppCompatActivity {
@@ -20,6 +23,7 @@ public class SignupActivity extends AppCompatActivity {
     ImageView signupNaverLogoImage;
     Button AuthenticationRequestButton;
     CheckBox certificatiion_CheckBox1, certificatiion_CheckBox2, certificatiion_CheckBox3, certificatiion_CheckBox4, certificatiion_CheckBox5;
+    TextView mobile_carrier_TextView1, mobile_carrier_TextView2, mobile_carrier_TextView3, mobile_carrier_TextView4, mobile_carrier_TextView5, mobile_carrier_TextView6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +49,49 @@ public class SignupActivity extends AppCompatActivity {
         mobileCarrierCheckBox1 = (CheckBox) findViewById(R.id.mobileCarrierCheckBox1);
         mobileCarrierCheckBox2 = (CheckBox) findViewById(R.id.mobileCarrierCheckBox2);
         AuthenticationRequestButton = (Button) findViewById(R.id.AuthenticationRequestButton);
+        mobile_carrier_TextView1 = (TextView) findViewById(R.id.mobile_carrier_TextView1);
+        mobile_carrier_TextView2 = (TextView) findViewById(R.id.mobile_carrier_TextView2);
+        mobile_carrier_TextView3 = (TextView) findViewById(R.id.mobile_carrier_TextView3);
+        mobile_carrier_TextView4 = (TextView) findViewById(R.id.mobile_carrier_TextView4);
+        mobile_carrier_TextView5 = (TextView) findViewById(R.id.mobile_carrier_TextView5);
+        mobile_carrier_TextView6 = (TextView) findViewById(R.id.mobile_carrier_TextView6);
+
+        mobile_carrier_TextView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mobile_carrier_TextView_clicked(mobile_carrier_TextView1);
+            }
+        });
+        mobile_carrier_TextView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mobile_carrier_TextView_clicked(mobile_carrier_TextView2);
+            }
+        });
+        mobile_carrier_TextView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mobile_carrier_TextView_clicked(mobile_carrier_TextView3);
+            }
+        });
+        mobile_carrier_TextView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mobile_carrier_TextView_clicked(mobile_carrier_TextView4);
+            }
+        });
+        mobile_carrier_TextView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mobile_carrier_TextView_clicked(mobile_carrier_TextView5);
+            }
+        });
+        mobile_carrier_TextView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mobile_carrier_TextView_clicked(mobile_carrier_TextView6);
+            }
+        });
         // 실명 인증된 아이디로 가입 checkBox 클릭 리스너
         signUPRealUsernameIDCheckBox = findViewById(R.id.signUPRealUsernameIDCheckBox);
         signUPRealUsernameIDCheckBox.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +167,10 @@ public class SignupActivity extends AppCompatActivity {
         }
     }
 
+    private void mobile_carrier_TextView_clicked(TextView textView){
+        mobileCarrierCheckBox1.setText(textView.getText());
+        chooseMobileCarrierLayout.setVisibility(View.GONE);
+    }
     private void expantionCheckBoxChecked(boolean a) {
         if(a){
             expansion_certification_touch_Layout.setVisibility(View.VISIBLE);
@@ -142,9 +193,6 @@ public class SignupActivity extends AppCompatActivity {
             certificatiion_CheckBox4.setChecked(false);
             certificatiion_CheckBox5.setChecked(false);
         }
-    }
-    private void checkboxCheckedVerification(boolean a1, boolean a2, boolean a3, boolean a4, boolean a5){
-
     }
 
     private void MobileCarrierCheckBoxClick() {
