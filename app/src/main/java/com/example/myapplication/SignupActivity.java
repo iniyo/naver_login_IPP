@@ -170,6 +170,8 @@ public class SignupActivity extends AppCompatActivity {
     private void mobile_carrier_TextView_clicked(TextView textView){
         mobileCarrierCheckBox1.setText(textView.getText());
         chooseMobileCarrierLayout.setVisibility(View.GONE);
+        mobileCarrierCheckBox1.setChecked(false);
+        mobileCarrierCheckBox2.setChecked(false);
     }
     private void expantionCheckBoxChecked(boolean a) {
         if(a){
@@ -198,6 +200,8 @@ public class SignupActivity extends AppCompatActivity {
     private void MobileCarrierCheckBoxClick() {
         if (mobileCarrierCheckBox1.isChecked() || mobileCarrierCheckBox2.isChecked()) {
             chooseMobileCarrierLayout.setVisibility(View.VISIBLE);
+            mobileCarrierCheckBox1.setChecked(true);
+            mobileCarrierCheckBox2.setChecked(true);
         } else {
             chooseMobileCarrierLayout.setVisibility(View.GONE);
         }
