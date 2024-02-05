@@ -429,6 +429,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:layout_marginTop="9dp"
             android:orientation="horizontal">
 
@@ -445,14 +446,14 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/login_menu_footer1"
                 android:textColor="@color/default_naver_login_text_color"
-                android:textSize="11dp" />
+                android:textSize="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:text="@string/login_menu_footer_naverCorp"
-                android:textSize="11dp" />
+                android:textSize="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -460,7 +461,7 @@
                 android:layout_marginStart="3dp"
                 android:text="@string/login_menu_footer2"
                 android:textColor="@color/default_naver_login_text_color"
-                android:textSize="11dp" />
+                android:textSize="10dp" />
         </LinearLayout>
 
     </LinearLayout>
