@@ -105,7 +105,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@drawable/contour_middle_line"></View>
 
             <!-- 비밀번호 입력 Layout -->
@@ -134,7 +134,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@drawable/contour_middle_line"></View>
 
             <!-- 이메일 주소 입력 Layout -->
@@ -200,7 +200,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@drawable/contour_middle_line" />
 
             <!-- 생년월일 선택 Layout -->
@@ -229,7 +229,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@drawable/contour_middle_line" />
 
             <!-- 통신사 선택 Layout -->
@@ -293,16 +293,23 @@
                         android:gravity="center"
                         android:text="@string/male_Man"
                         android:textColor="@drawable/signup_radiobutton_selector_textcolor" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/contour_middle_line" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@drawable/right_left_line"
                         android:button="@null"
                         android:gravity="center"
                         android:text="@string/male_Woman"
                         android:textColor="@drawable/signup_radiobutton_selector_textcolor" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/contour_middle_line" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -315,10 +322,9 @@
                 </RadioGroup>
             </LinearLayout>
 
-
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@drawable/contour_middle_line"></View>
 
             <!-- 라디오 버튼, 남자,여자 외국인,내국인 default=gone Layout -->
@@ -354,7 +360,7 @@
 
                     <View
                         android:id="@+id/RadioButton_lineView_dfGone1"
-                        android:layout_width="2dp"
+                        android:layout_width="1dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/contour_middle_line" />
 
@@ -390,7 +396,7 @@
 
                     <View
                         android:id="@+id/RadioButton_lineView_dfGone2"
-                        android:layout_width="2dp"
+                        android:layout_width="1dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/contour_middle_line" />
 
@@ -418,7 +424,8 @@
                 <ImageView
                     android:layout_width="23dp"
                     android:layout_height="23dp"
-                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="3dp"
                     android:background="@drawable/global" />
 
                 <Spinner
@@ -427,7 +434,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@null"
-                    android:entries="@array/contry_spinner_array"
+                    android:entries="@array/country_array"
                     app:layout_constraintStart_toStartOf="@+id/scrollContainer" />
 
                 <ImageView
@@ -439,7 +446,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@drawable/contour_middle_line" />
 
             <LinearLayout

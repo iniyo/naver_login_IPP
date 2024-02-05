@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -17,6 +18,7 @@ public class SignupActivity extends AppCompatActivity {
     Spinner countryNumberSpinner;
     CheckBox signUPRealUsernameIDCheckBox, expantionCheckBox, certificationTermsandConditionsCheckBox, mobileCarrierCheckBox1, mobileCarrierCheckBox2;
     ImageView signupNaverLogoImage;
+    Button AuthenticationRequestButton;
     CheckBox certificatiion_CheckBox1, certificatiion_CheckBox2, certificatiion_CheckBox3, certificatiion_CheckBox4, certificatiion_CheckBox5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class SignupActivity extends AppCompatActivity {
         certificatiion_CheckBox5 = (CheckBox) findViewById(R.id.certificatiion_CheckBox5);
         mobileCarrierCheckBox1 = (CheckBox) findViewById(R.id.mobileCarrierCheckBox1);
         mobileCarrierCheckBox2 = (CheckBox) findViewById(R.id.mobileCarrierCheckBox2);
+        AuthenticationRequestButton = (Button) findViewById(R.id.AuthenticationRequestButton);
         // 실명 인증된 아이디로 가입 checkBox 클릭 리스너
         signUPRealUsernameIDCheckBox = findViewById(R.id.signUPRealUsernameIDCheckBox);
         signUPRealUsernameIDCheckBox.setOnClickListener(new View.OnClickListener() {
@@ -86,11 +89,15 @@ public class SignupActivity extends AppCompatActivity {
                 MobileCarrierCheckBoxClick();
             }
         });
-
-        // 국가 번호 선택 Helpher Spinner
+        AuthenticationRequestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        // 국가 번호 선택 Helpher Spinner, 스피너 어댑터 사용해서 배경과 텍스트 컬러 설정
         CountryCodeSpinnerHelper.setupCountryCodeSpinner(this, countryNumberSpinner);
-
-
     }
 
     // checkBox의 상태에 따라 보여지는 뷰와 안 보이는 뷰 설정 함수

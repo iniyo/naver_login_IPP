@@ -15,13 +15,13 @@
         android:orientation="vertical"
         android:paddingHorizontal="40dp">
 
-        <Spinner
+        <android.widget.Spinner
             android:id="@+id/countrySpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="20dp"
-            android:entries="@array/contry_spinner_array"
+            android:entries="@array/country_array"
             app:layout_constraintStart_toStartOf="@+id/scrollContainer" />
 
         <ImageView
@@ -133,7 +133,7 @@
                         android:id="@+id/checkBox"
                         android:layout_width="23dp"
                         android:layout_height="23dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginRight="5dp"
                         android:background="@drawable/checkbox_selector"
                         android:button="@null" />
@@ -172,10 +172,10 @@
                 </LinearLayout>
 
                 <android.widget.Button
-                    android:id="@+id/button2"
+                    android:id="@+id/login_naver_button"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/loginbutton_background"
                     android:gravity="center"
                     android:text="@string/login"
@@ -233,9 +233,14 @@
                     android:text="@string/signUP"
                     android:textColor="@color/default_naver_login_text_color" />
             </LinearLayout>
-            <FrameLayout
+
+            <LinearLayout
+                android:paddingBottom="1dp"
+                android:paddingStart="1dp"
+                android:layout_marginTop="1dp"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
                 android:orientation="horizontal"
                 android:background="@drawable/login_menu_tap_border"
                 app:layout_constraintTop_toTopOf="parent"
@@ -247,6 +252,7 @@
                     android:layout_width="111dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:layout_marginEnd="-2.1dp"
                     android:background="@drawable/login_menu_tap_border1"
                     android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
@@ -268,12 +274,13 @@
                         android:text="아이디로 로그인"
                         android:visibility="gone" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/oneTimePasswordTapLayout"
-                    android:layout_width="111dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="-1.4dp"
                     android:layout_weight="1"
-                    android:layout_marginStart="108.5dp"
                     android:gravity="center"
                     android:background="@drawable/login_menu_tap_border2"
                     android:orientation="horizontal"
@@ -296,12 +303,16 @@
                         android:text="일회용 번호"
                         android:visibility="gone" />
                 </LinearLayout>
-
+                <View
+                    android:layout_height="match_parent"
+                    android:background="#C6C6C6"
+                    android:layout_gravity="center"
+                    android:layout_width="1dp"></View>
                 <LinearLayout
                     android:id="@+id/qrCodeLoginLayout"
-                    android:layout_width="112dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="219dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:background="@drawable/login_menu_tap_border3"
@@ -323,23 +334,7 @@
                         android:text="QR코드"
                         android:visibility="gone" />
                 </LinearLayout>
-
-                <View
-                    android:layout_height="54dp"
-                    android:background="#C6C6C6"
-                    android:layout_marginBottom="2.5dp"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="56.5dp"
-                    android:layout_width="1dp"></View>
-
-                <View
-                    android:layout_height="match_parent"
-                    android:background="#C6C6C6"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="53.5dp"
-                    android:layout_width="1dp"></View>
-
-            </FrameLayout>
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView

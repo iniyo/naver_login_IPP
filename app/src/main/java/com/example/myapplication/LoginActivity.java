@@ -3,8 +3,10 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,14 +15,27 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LoginActivity extends AppCompatActivity {
     ImageView loginNaverLogoImage;
     TextView userSignUP;
+    Button login_naver_button;
+    Spinner countrySpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // textView에 인텐트 이동 효과
+        // 컨트롤 추가
         userSignUP = findViewById(R.id.userSignUP);
+        login_naver_button = findViewById(R.id.login_naver_button);
         loginNaverLogoImage = findViewById(R.id.loginNaverLogoImage);
+        countrySpinner = findViewById(R.id.countrySpinner);
+
+        // 이동 효과
+        login_naver_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
         userSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
