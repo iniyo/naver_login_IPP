@@ -15,23 +15,33 @@ import java.util.Set;
 
 public class CountryCodeSpinnerHelper {
 
+    // 현재 컨텍스트(이 함수를 사용하는 액티비티 혹은 다른), 해당 context에서 사용하는 spinner
     public static void setupCountryCodeSpinner(Context context, Spinner spinner) {
         // 국가 코드와 국가 이름을 함께 구성하여 Set에 추가 (중복 방지, 입력 순서 유지)
-        Set<CountryItem> countryItems = new LinkedHashSet<>();
-
+        Set<CountryItem> countryItems = new LinkedHashSet<>(); // 그냥 HashSet은 순서가 유지되지 않음. LinkedHashSet을 사용하여 순서 유지
+        // context = 실행환경에 대한 객체, 여기선 해당 액티비티
         Resources resources = context.getResources();
+        // 안드로이드 설정 언어, 국제 표준 국가명 리스트를 가져와서 문자열 배열에 저장
         String[] countryCodes = Locale.getISOCountries();
 
+        // 문자열 배열에 가져온 값으로 locale에서 해당 나라를 찾음.
         for (String countryCode : countryCodes) {
             Locale locale = new Locale("", countryCode);
+            // 화면에 보여질 국가 이름을 한국어로 변경
             String displayName = locale.getDisplayCountry(Locale.KOREAN);
+            // 지역 이름에 대한 code를 가져옴, getInstance()로 앱이 시작될 때 한번만 메모리 할당.
             int phoneCode = PhoneNumberUtil.getInstance().getCountryCodeForRegion(countryCode);
+            // 위에서 생성한 CountryItems에 각국 이름 "+" 국가 번호, 국가 코드 (ex ko_KR)
             countryItems.add(new CountryItem(displayName, "+" + phoneCode, countryCode));
         }
 
         // 어댑터 설정
+        // 사용하는 컨텍스트의 spinner item을 설정, ArrayAdapter 초기화 시 3가지 항목 필요.
+        // 1) Context, 2) 배열의 각 항목을 어떻게 표시할 지 지정하는 레이아웃 3) 배열
         ArrayAdapter<CountryItem> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_item, countryItems.toArray(new CountryItem[0]));
+        // dropdown
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // 스피너에 어댑터 부착
         spinner.setAdapter(adapter);
 
         // 스피너 초기 선택을 대한민국으로 설정

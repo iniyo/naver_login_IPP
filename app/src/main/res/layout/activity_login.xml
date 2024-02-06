@@ -249,8 +249,9 @@
 
                 <LinearLayout
                     android:id="@+id/userIDLoginTapLayout"
-                    android:layout_width="111dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:layout_marginEnd="-2.1dp"
                     android:background="@drawable/login_menu_tap_border1"
