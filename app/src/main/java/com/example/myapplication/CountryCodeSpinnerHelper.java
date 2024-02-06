@@ -103,6 +103,7 @@ public class CountryCodeSpinnerHelper {
             return countryCodeAlpha2;
         }
 
+        // toString() 함수 override
         @Override
         public String toString() {
             return displayName + " " + countryCode;
