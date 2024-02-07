@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.naverLoginAndSignUP_IPP;
 
 import androidx.appcompat.app.AppCompatActivity;
 

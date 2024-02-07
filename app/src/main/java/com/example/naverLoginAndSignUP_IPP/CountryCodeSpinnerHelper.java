@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.naverLoginAndSignUP_IPP;
 
 import android.content.Context;
 import android.content.res.Resources;
